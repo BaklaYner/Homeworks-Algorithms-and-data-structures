@@ -37,7 +37,7 @@ public class PriorityQueue {
         return true;
     }
 
-    public int remove() throws EmptyQueueException {
+    public int remove() {
         if (!isEmpty()) {
             return arr[--size];
         } else {
@@ -45,7 +45,7 @@ public class PriorityQueue {
         }
     }
 
-    public int peek() throws EmptyQueueException {
+    public int peek() {
         if (!isEmpty()) {
             return arr[size - 1];
         } else {
