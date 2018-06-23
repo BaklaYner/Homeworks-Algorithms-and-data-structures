@@ -16,7 +16,7 @@ public class StringAnalyzer {
 
     public StringAnalyzer(String in) {
         input = in;
-        stack = new Stack<Character>(input.length());
+        stack = new Stack<>(input.length());
     }
 
     // Task 1.
