@@ -9,7 +9,7 @@ package Lesson3_Stack_And_Queue.Queue;
  * @link https://github.com/BaklaYner/Homeworks-Algorithms-and-data-structures
  */
 
-public class EmptyQueueException extends Exception {
+public class EmptyQueueException extends RuntimeException {
 
     public EmptyQueueException() {
         super("Queue is empty!");
