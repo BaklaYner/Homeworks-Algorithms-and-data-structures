@@ -1,5 +1,6 @@
 package Lesson3_Stack_And_Queue;
 
+import Lesson3_Stack_And_Queue.Deque.Deque;
 import Lesson3_Stack_And_Queue.Queue.EmptyQueueException;
 import Lesson3_Stack_And_Queue.Queue.PriorityQueue;
 import Lesson3_Stack_And_Queue.Queue.Queue;
@@ -14,7 +15,7 @@ import java.io.InputStreamReader;
  * Homework for lesson 3.
  *
  * @author Bogdanov Anton.
- * @version dated June 21, 2018.
+ * @version dated June 23, 2018.
  * @link https://github.com/BaklaYner/Homeworks-Algorithms-and-data-structures
  */
 
@@ -29,6 +30,8 @@ public class Lesson3 {
 
         testPriorityQueue();
         System.out.println();
+
+        testDeque();
     }
 
     private static void testStack() throws IOException {
@@ -90,4 +93,23 @@ public class Lesson3 {
         priorQ.insert(22);
         System.out.println(priorQ);
     }
+
+    private static void testDeque() throws EmptyQueueException {
+        Deque<Integer> deque = new Deque<>(5);
+        deque.addFirst(33);
+        deque.addFirst(22);
+        deque.addFirst(11);
+        deque.addLast(44);
+        deque.addLast(55);
+        System.out.println(deque);
+
+        deque.removeFirst();
+        deque.removeLast();
+        System.out.println(deque);
+
+        deque.addFirst(11);
+        deque.addLast(55);
+        System.out.println(deque);
+    }
+
 }
