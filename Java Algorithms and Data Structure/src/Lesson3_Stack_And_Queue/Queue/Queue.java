@@ -41,7 +41,7 @@ public class Queue<T> {
             }
             return tmp;
         } else {
-            return null;
+            throw new EmptyQueueException("Queue is empty");
         }
     }
 
@@ -49,7 +49,7 @@ public class Queue<T> {
         if (!isEmpty()) {
             return (T) arr[head];
         } else {
-            return null;
+            throw new EmptyQueueException("Queue is empty");
         }
     }
 
